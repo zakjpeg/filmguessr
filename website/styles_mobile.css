@@ -13,7 +13,7 @@
         margin-top: 0svh;
     }
     .game__form {
-        margin-right: ;
+        margin-right: auto;
         margin-left: auto;
     }
     .game__right {
@@ -22,6 +22,12 @@
     #year__slider {
         width: 90%;
         align-self: center;
+    }
+    #guess__button {
+        width: 80%;
+    }
+    #still {
+        min-height: 30svh;
     }
 
 
