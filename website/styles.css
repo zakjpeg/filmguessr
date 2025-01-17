@@ -13,61 +13,10 @@ body {
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
     font-family:"barlow", sans-serif;
-
-    
+  
 }
 
-.header {
-    display: flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.header__left h1 {
-    font-size: xx-large;
-    font-family: "Barlow", serif;
-    font-weight:
-
-}
-
-#film__guessr__logo {
-    color: var(--accent-color);
-}
-
-.header__right {
-    display: flex;
-}
-
-.header__right img{
-    width: 50px;
-    margin-left: 30px;
-    filter:brightness(3)
-}
-
-.header__right img, .header__right button {
-    cursor: pointer;
-}
-
-.header__right button {
-    color: var(--primary-text-color);
-    background-color: transparent;
-    border: none;
-    font-family: "barlow", serif;
-    font-weight: 500;
-    font-size: large;
-    margin-left: 30px;
-    font-style: italic;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition-duration: 0.2s;
-}
-
-.header__right button:hover {
-    color: var(--accent-color);
-    text-decoration-color: var(--accent-color);
-}
 
 .game {
     display: flex;

@@ -1,0 +1,29 @@
+@media screen and (max-width: 552px) {
+
+    .header {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    #profile__picture {
+        width: 40px;
+    }
+    .game {
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 0svh;
+    }
+    .game__form {
+        margin-right: ;
+        margin-left: auto;
+    }
+    .game__right {
+        margin-left: 0px;
+    }
+    #year__slider {
+        width: 90%;
+        align-self: center;
+    }
+
+
+
+}
