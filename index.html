@@ -1,0 +1,107 @@
+<!-- To do:
+
+    - text form expands when too many characters entered
+    - possibly animate the ambient background
+
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- variable stuff -->
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmGuessr - Guess the Movie</title>
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="website/styles_header.css">
+    <link rel="stylesheet" href="website/styles.css">
+    <link rel="stylesheet" href="website/styles_mobile.css">
+    
+
+
+    <!-- scripts stuff -->
+
+
+    <!-- Font Stuff-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,-25&icon_names=movie" />
+</head>
+<body>
+    <div class="header">
+        <div class="header__left">
+            <h1>FILMGUESSR
+                <span class="material-symbols-outlined" id="film__guessr__logo">
+                    movie
+                </span>
+            </h1>
+        </div>
+        <div class="header__right">
+            <button>Challenges</button>
+            <button>Stats</button>
+            <button>Profile</button>
+            <img src="assets/defaultpfp.png" alt="" id="profile__picture">
+
+        </div>
+    </div>
+
+    <div class="game">
+        <div class="game__left">
+            <div class="image__window">
+                <div class="ambience__container">
+                    <img class="ambience" alt="" id="still__ambience" >
+                </div>
+                <img 
+                
+                src="https://film-grab.com/wp-content/uploads/2024/04/Club-Zero-22-1024x576.jpg" 
+
+
+                alt="" id="still" 
+                onload="document.getElementById('still__ambience').src = this.src" 
+                >
+
+               
+                
+                
+                
+                <!-- <div class="grain">
+                    <img src="/assets/graintexture.png" alt="">
+                </div> -->
+
+            </div>
+        </div>
+        <div class="game__right">
+            <form action="script.js" class="game__form">
+                <label for="guesstitle">Title</label>
+                <input type="text" id="guesstitle" name="guesstitle" placeholder="Movie Name" autocomplete="off">
+                <label for="guessyear" id="year__label">Year</label>
+                
+                <div class="year__display__wrapper">
+
+                    <h1 id="year__display">1997</h1>
+                    <div class="year__inc__dec__wrapper">
+                        <h1 class="year__inc__dec" id="year__increment">+</h1> <h1 class="year__inc__dec" id="year__decrement">-</h1>
+                    </div>
+                </div>
+
+                <input type="range" min="1950" max="2025" value="1" class="year__slider" id="year__slider" defaultValue="1999">
+                <script src="website/year__script.js"></script>
+                <input type="submit" id="guess__button" value="GUESS">
+
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

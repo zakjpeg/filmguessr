@@ -5,6 +5,7 @@
     --secondary-text-color: black;
     --accent-color:  rgb(208, 255, 0);
     --accent-color-lighter: rgb(225, 255, 93);
+    --semi-transparent-white: rgba(255, 255, 255, 0.258);
 }
 
 
@@ -12,76 +13,10 @@ body {
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
     font-family:"barlow", sans-serif;
-
-    
+  
 }
 
 
-.ambient__background {
-    width: 100svw;
-    height: 100svh;
-    background-image: url(https://film-grab.com/wp-content/uploads/2024/03/The-Book-of-Clarence01.jpg);
-    background-size: 1100%;
-    background-position: 50% 20%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    position: absolute;
-    z-index: -2;
-    filter: blur(70px) opacity(0.5);
-
-}
-
-.header {
-    display: flex;
-    padding-left: 30px;
-    padding-right: 30px;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header__left h1 {
-    font-size: xx-large;
-    font-family: "Barlow", serif;
-    font-weight:
-
-}
-
-#film__guessr__logo {
-    color: var(--accent-color);
-}
-
-.header__right {
-    display: flex;
-}
-
-.header__right img{
-    width: 50px;
-    margin-left: 30px;
-    filter:brightness(3)
-}
-
-.header__right img, .header__right button {
-    cursor: pointer;
-}
-
-.header__right button {
-    color: var(--primary-text-color);
-    background-color: transparent;
-    border: none;
-    font-family: "barlow", serif;
-    font-weight: 500;
-    font-size: large;
-    margin-left: 30px;
-    font-style: italic;
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    transition-duration: 0.2s;
-}
-
-.header__right button:hover {
-    color: var(--accent-color);
-    text-decoration-color: var(--accent-color);
-}
 
 .game {
     display: flex;
@@ -98,15 +33,61 @@ body {
 }
 
 .image__window img {
-    max-height: 80svh;
-    width: 60svw;
+
+}
+
+#still {
     border-radius: 15px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.627); 
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.627);
+    max-height: 80svh;
+    width: 60svw; 
     object-fit: cover;
 }
-.image__window .image {
-    position: fixed;
-    z-index: 100;
+
+.ambience__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+#still__ambience {
+    filter: saturate(3) blur(150px) opacity(0.13);
+    position: absolute;
+    transform: translate(-25%, -25%);
+    pointer-events: none;
+    width:500%;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+    animation: scroll 100s linear infinite;
+}
+
+
+  @keyframes scroll {
+    0% {
+      top: 100%; /* Start below the container */
+      left: 100%;
+    }
+    50% {
+        top: 50%;
+        left: -100%; 
+    }
+    100% {
+      top: 100%; /* Scroll to the top of the container */
+      left: 100%;
+
+    }
+  }
+
+
+
+
+
+
+.ambience img {
 }
 
 /* Grain settings */
@@ -136,12 +117,6 @@ body {
   } */
 
 
-.image__window .ambience {
-    position: fixed;
-    filter: saturate(3) blur(70px) opacity(0.2);
-    transform: scale(4);
-    z-index: -1;
-}
 
 .game__right {
     display: flex;
@@ -165,6 +140,8 @@ body {
     padding-left: 15px;
 }
 
+
+
 #guesstitle {
     font-family: "Barlow", serif;
     font-weight: bold;
@@ -179,6 +156,9 @@ body {
     padding-bottom: 5px;
     padding-left: 10px;
     font-size: 3rem
+}
+#guesstitle::placeholder {
+    color: var(--semi-transparent-white);
 }
 
 #guess__button {
@@ -273,7 +253,7 @@ body {
     .game {
         flex-direction: column;
     }
-    .image__window img {
+    #still {
         max-height: none;
         width: 100%;
         margin-bottom: 50px;
