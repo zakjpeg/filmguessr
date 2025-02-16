@@ -1,8 +1,15 @@
 <!-- To do:
 
+    Frontend: 
+    - JSON of score__comment splash text that randomly selects from movie quotes based on what score you get
+    - Progress bar showing how many points you got
     - text form expands when too many characters entered
-    - possibly animate the ambient background
+    - FIX LAGGY AMBIENT BACKGROUND
+    - Send title + year in json instead of plaintext
 
+    Serverside:
+    - Title Guessing
+    - User sessions
 
 
 
@@ -25,7 +32,7 @@
     <link rel="stylesheet" href="website/styles_header.css">
     <link rel="stylesheet" href="website/styles.css">
     <link rel="stylesheet" href="website/styles_mobile.css">
-    
+    <link rel="stylesheet" href="website/answer_page.css">
 
 
     <!-- scripts stuff -->
@@ -40,11 +47,13 @@
 <body>
     <div class="header">
         <div class="header__left">
-            <h1>FILMGUESSR
-                <span class="material-symbols-outlined" id="film__guessr__logo">
-                    movie
-                </span>
-            </h1>
+            <a href="/play.html">
+                <h1>FILMGUESSR
+                    <span class="material-symbols-outlined" id="film__guessr__logo">
+                        movie
+                    </span>
+                </h1>
+            </a>
         </div>
         <div class="header__right">
             <button>Challenges</button>
@@ -61,27 +70,19 @@
                 <div class="ambience__container">
                     <img class="ambience" alt="" id="still__ambience" >
                 </div>
-                <img 
-                
-                src="https://film-grab.com/wp-content/uploads/photo-gallery/bladerunner042.jpg?bwg=1551282394" 
+                <img src="https://www.htmlcsscolor.com/preview/gallery/130606.png" alt="" id="still" >
 
-
-                alt="" id="still" 
-                onload="document.getElementById('still__ambience').src = this.src" 
-                >
-
-               
-                
-                
-                
-                <!-- <div class="grain">
-                    <img src="/assets/graintexture.png" alt="">
-                </div> -->
-
+                <div class="answer__year" id="answer__year">
+                    2019
+                </div>
+                <div class="answer__title" id="answer__title">
+                    Avengers: Endgame
+                </div>
             </div>
         </div>
-        <div class="game__right">
-            <form action="script.js" class="game__form">
+        <!-- GUESS FORM -->
+        <div class="game__right" id="game__right">
+            <div class="game__form">
                 <label for="guesstitle">Title</label>
                 <input type="text" id="guesstitle" name="guesstitle" placeholder="Movie Name" autocomplete="off">
                 <label for="guessyear" id="year__label">Year</label>
@@ -95,13 +96,49 @@
                 </div>
 
                 <input type="range" min="1950" max="2025" value="1" class="year__slider" id="year__slider" defaultValue="1999">
-                <script src="website/year__script.js"></script>
-                <input type="submit" id="guess__button" value="GUESS">
-
-
-            </form>
+                <button id="guess__button">GUESS</button>
+                <!-- <input type="submit" id="guess__button" value="GUESS"> -->
+            </div>
         </div>
+
+
+
+        <!-- ANSWER SCREEN -->
+
+
+        <div class="answer__screen" id="answer__screen">
+            <h2 id="answer__screen__guess__title">
+            </h2>
+            <h2 id="answer__screen__guess__year">
+            </h2>
+            <h1 id="points__earned">
+                +<a id="points__earned__value">5000</a>
+            </h1>
+            <h2 id="points__comment">
+                <!-- POINTS COMMENT GOES HERE -->
+            </h2>
+            <h2 class="year__deviance__statement">
+                Your guess was 
+                <a id="year__deviance__value"> &nbsp; 5 YEARS &nbsp;</a> 
+                from the correct release date.
+            </h2>
+            <button id="next__round__button">
+                NEXT ROUND
+            </button>
+        </div>
+
+
     </div>
-    
+    <script src="website/ambience__control.js"></script>
+    <script src="website/game__loop__script.js"></script>
+    <script src="website/year__script.js"></script>
+
+
+
 </body>
+
+<!-- scripts -->
+
+
+
 </html>
