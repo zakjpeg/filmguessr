@@ -1,0 +1,14 @@
+/* .game__right {
+
+    flex-direction: column
+} */
+
+.top__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    display: none;
+    opacity: .5;
+}

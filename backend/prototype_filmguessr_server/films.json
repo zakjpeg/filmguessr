@@ -1,0 +1,49 @@
+{
+    "movies": [
+      {
+        "id": 1,
+        "title": "Spider-Man: Far From Home",
+        "director": "Jon Watts",
+        "year": 2019,
+        "screenshots": [
+          "https://film-grab.com/wp-content/uploads/photo-gallery/Spiderman_Far_From_Home_002.jpg?bwg=1596705802",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/Spiderman_Far_From_Home_029.jpg?bwg=1596705801",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/Spiderman_Far_From_Home_034.jpg?bwg=1596705801"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Oceans Eleven",
+        "director": "Steven Soderbergh",
+        "year": 2001,
+        "screenshots": [
+          "https://film-grab.com/wp-content/uploads/photo-gallery/12%20(782).jpg?bwg=1547240553",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/08%20(765).jpg?bwg=1547240554",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/36%20(778).jpg?bwg=1547240553"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Isle of Dogs",
+        "director": "Wes Anderson",
+        "year": 2018,
+        "screenshots": [
+          "https://film-grab.com/wp-content/uploads/photo-gallery/Isle_of_Dogs_016.jpg?bwg=1569496461",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/Isle_of_Dogs_038.jpg?bwg=1569496457",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/Isle_of_Dogs_055.jpg?bwg=1569496457"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Terminator 2: Judgement Day",
+        "director": "James Cameron",
+        "year": 1991,
+        "screenshots": [
+          "https://film-grab.com/wp-content/uploads/2018/04/37-1000.jpg",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/17%20(1003).jpg?bwg=1547413215",
+          "https://film-grab.com/wp-content/uploads/photo-gallery/26%20(1004).jpg?bwg=1547413215"
+        ]
+      }
+    ]
+  }
+  

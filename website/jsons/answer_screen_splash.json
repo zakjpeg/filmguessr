@@ -1,0 +1,67 @@
+{
+
+    "splash-text": {
+        "1" : { 
+            "1" : "I'm the king of the world!",
+            "2" : "Hasta la vista, baby.",
+            "3" : "I am inevitable.",
+            "4" : "Great Scott!",
+            "5" : "I could do this all day",
+            "6" : "This is the way.",
+            "7" : "Here's Johnny!",
+            "8" : "New High Score, what's that mean?"
+
+        },
+        "2" : {
+            "1" : "So close, yet so far.",
+            "2" : "That was almost a bingo!",
+            "3" : "You mustn't be afraid to dream a little bigger, darling.",
+            "4" : "You had my curiosity, but now you have my attention.",
+            "5" : "Tis but a scratch.",
+            "6" : "And in the morning... I’m making waffles!"
+
+        },
+        "3" : {
+            "1" : "That'll do, Donkey. That'll do.",
+            "2" : "Not bad, kid. Not bad",
+            "3" : "You were on the right track, kid",
+            "4" : "May the force be with you"
+
+
+        },
+        "4" : {
+            "1" : "Just keep swimming.",
+            "2" : "Alright, alright, alright...",
+            "3" : "Oh hi mark.",
+            "4" : "Yeah? Well... that's just, like, your opinion, man."
+
+        },
+        "5" : {
+            "1" : "It's a trap!",
+            "2" : "You can't handle the truth!",
+            "3" : "May the odds be ever in your favor.",
+            "4" : "I AM serious, and don't call me 'Shirley'."
+
+
+        },
+        "6" : {
+            "1" : "You shall not pass!",
+            "2" : "Keep the change, ya filthy animal!",
+            "3" : "You're gonna need a bigger boat!",
+            "4" : "You're killing me Smalls!",
+            "5" : "Mr. Stark, I don't feel so good..."
+
+        },
+        "7" : {
+            "1" : "Houston, we have a problem.",
+            "2" : "Why, Johnny, why?",
+            "3" : "I find your lack of accuracy disturbing... ",
+            "4" : "Are you not entertained?!",
+            "5" : "Say \"what\" again!"
+
+        }
+    }
+
+
+
+}

@@ -1,0 +1,8 @@
+/* Answer screen */
+.answer__screen {
+    display: none;
+}
+
+.answer__year, .answer__title {
+    display: none;
+}
