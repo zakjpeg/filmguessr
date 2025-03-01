@@ -1,14 +1,11 @@
 <!-- To do:
 
     Frontend: 
-    - JSON of score__comment splash text that randomly selects from movie quotes based on what score you get
     - Progress bar showing how many points you got
     - text form expands when too many characters entered
     - FIX LAGGY AMBIENT BACKGROUND
-    - Send title + year in json instead of plaintext
 
     Serverside:
-    - Title Guessing
     - User sessions
 
 
@@ -29,11 +26,11 @@
     <title>FilmGuessr - Guess the Movie</title>
 
     <!-- style sheets -->
-    <link rel="stylesheet" href="website/styles_header.css">
-    <link rel="stylesheet" href="website/styles.css">
-    <link rel="stylesheet" href="website/styles_mobile.css">
-    <link rel="stylesheet" href="website/answer_page.css">
-
+    <link rel="stylesheet" href="website/styles/styles_header.css">
+    <link rel="stylesheet" href="website/styles/styles.css">
+    <link rel="stylesheet" href="website/styles/styles_mobile.css">
+    <link rel="stylesheet" href="website/styles/answer_page.css">
+    <link rel="stylesheet" href="website/styles/timer_style.css">
 
     <!-- scripts stuff -->
 
@@ -80,16 +77,23 @@
                 </div>
             </div>
         </div>
+
         <!-- GUESS FORM -->
         <div class="game__right" id="game__right">
+            
             <div class="game__form">
-                <label for="guesstitle">Title</label>
+                <div class="top__row">
+                    <label for="guesstitle">Title</label>
+                    <div class="timer" id="timer">
+                        <span id="timer__minute"></span><span>:</span><span id="timer__second"></span>
+                    </div>
+                </div>
                 <input type="text" id="guesstitle" name="guesstitle" placeholder="Movie Name" autocomplete="off">
                 <label for="guessyear" id="year__label">Year</label>
                 
                 <div class="year__display__wrapper">
 
-                    <h1 id="year__display">1997</h1>
+                    <h1 id="year__display"><!--Year display here-->></h1>
                     <div class="year__inc__dec__wrapper">
                         <h1 class="year__inc__dec" id="year__increment">+</h1> <h1 class="year__inc__dec" id="year__decrement">-</h1>
                     </div>
@@ -112,14 +116,14 @@
             <h2 id="answer__screen__guess__year">
             </h2>
             <h1 id="points__earned">
-                +<a id="points__earned__value">5000</a>
+                +<a id="points__earned__value">0</a>
             </h1>
             <h2 id="points__comment">
                 <!-- POINTS COMMENT GOES HERE -->
             </h2>
             <h2 class="year__deviance__statement">
                 Your guess was 
-                <a id="year__deviance__value"> &nbsp; 5 YEARS &nbsp;</a> 
+                <a id="year__deviance__value"> &nbsp; # YEARS &nbsp;</a> 
                 from the correct release date.
             </h2>
             <button id="next__round__button">
@@ -129,15 +133,18 @@
 
 
     </div>
-    <script src="website/ambience__control.js"></script>
-    <script src="website/game__loop__script.js"></script>
-    <script src="website/year__script.js"></script>
+
+    <!-- scripts -->
+
+    <script src="website/scripts/ambience__control.js"></script>
+    <script src="website/scripts/game__loop__script.js"></script>
+    <script src="website/scripts/year__script.js"></script>
+    <script src="website/scripts/timer__script.js"></script>
 
 
 
 </body>
 
-<!-- scripts -->
 
 
 
